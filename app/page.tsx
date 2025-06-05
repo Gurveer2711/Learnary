@@ -3,10 +3,11 @@ import { Button } from '@/components/ui/button'
 import React from 'react'
 import CompanionList from '@/components/CompanionList'
 import Cta from '@/components/Cta'
+import { recentSessions } from '@/constants';
 const Page = () => {
   return (
     <main>
-      <h1 className='text-2xl underline'>Popular Companions</h1>
+      <h1 className='text-2xl font-bold'>Dashboard</h1>
       <section className='home-section'>
         <CompanionCard
           id="123"
@@ -34,7 +35,10 @@ const Page = () => {
         />
       </section>
       <section className='home-section'>
-        <CompanionList />
+        <CompanionList
+          companions={recentSessions}
+          className="w-2/3 max-lg:w-full"
+        />
         <Cta />
       </section>
     </main>
