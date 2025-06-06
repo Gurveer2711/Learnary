@@ -1,7 +1,6 @@
 import {
     Table,
     TableBody,
-    TableCaption,
     TableCell,
     TableHead,
     TableHeader,
@@ -79,6 +78,6 @@ const CompanionList = ({ companions, classNames }: CompanionListProps) => {
             </Table>
         </article>
     )
-}
+};
 
 export default CompanionList;
