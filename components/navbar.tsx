@@ -21,7 +21,7 @@ const Navbar = () => {
         <SignedOut>
           
             <SignInButton mode="modal">
-              <button className="text-md font-medium hover:text-primary border-2 border-black rounded-xl px-3 py-1 hover:bg-primary hover:text-white">
+              <button className="text-md font-medium hover:text-white border-2 border-black rounded-xl px-3 py-1 hover:bg-primary ">
                 Sign In
               </button>
             </SignInButton>
