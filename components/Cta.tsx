@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const Cta = () => {
   return (
-    <section className="cta-section">
+    <section className="cta-section mb-4">
       <div className="cta-badge">
         Start learning your way.
       </div>
@@ -12,8 +12,8 @@ const Cta = () => {
       <Image
         src="/images/cta.svg"
       alt="cta"
-      width={450}
-      height={1}
+      width={330}
+      height={330}
       />
       <Link
         href={'/companions/new'}

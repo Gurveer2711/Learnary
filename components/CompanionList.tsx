@@ -31,7 +31,7 @@ const CompanionList = ({ companions, classNames }: CompanionListProps) => {
                     <TableRow>
                         <TableHead className="text-lg w-2/3">Lessons</TableHead>
                         <TableHead className="text-lg">Subject</TableHead>
-                        <TableHead className="text-lg text-right">Duration</TableHead>
+                        <TableHead className="text-lg   text-right">Duration</TableHead>
 
                     </TableRow>
                 </TableHeader>
@@ -44,7 +44,7 @@ const CompanionList = ({ companions, classNames }: CompanionListProps) => {
                                 >
                                     <div className="flex items-center gap-2">
                                         <div
-                                            className="size-[72px] flex items-center rounded-lg justify-center max-sm:hidden"
+                                            className="size-[60px] flex items-center rounded-lg justify-center max-sm:hidden"
                                             style={{ backgroundColor: color }}
                                         >
                                             <Image
@@ -55,7 +55,7 @@ const CompanionList = ({ companions, classNames }: CompanionListProps) => {
                                             />
                                         </div>
                                         <div className="flex flex-col gap-2">
-                                            <p className="font-bold text-2xl">{name}</p>
+                                            <p className="font-semibold text-xl">{name}</p>
                                             <p className="text-lg">Topic: {topic}</p>
                                         </div>
                                     </div>
