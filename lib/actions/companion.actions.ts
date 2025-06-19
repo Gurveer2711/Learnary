@@ -44,7 +44,6 @@ export const getAllCompanions = async ({ limit = 10, page = 1, subject, topic }:
 
 export const getCompanion = async (id: string) => {
     const supabase = createSupabaseClient();
-
     const { data, error } = await supabase
         .from('companions')
         .select()
@@ -92,4 +91,16 @@ export const getUserSession = async (userId:string,limit = 10) => {
     if (error) throw new Error(error.message);
 
     return data.map(({ companions }) => companions); 
+}
+
+export const getUserCompanions = async (userId: string) => {
+    const supabase = createSupabaseClient();
+    const { data, error } = await supabase
+        .from('companions')
+        .select()
+        .eq('author', userId)
+    
+    if (error) throw new Error(error.message);
+
+    return data; 
 }

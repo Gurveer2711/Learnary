@@ -20,17 +20,18 @@ interface Companion {
 interface CompanionListProps {
     companions?: Companion[];
     classNames?: string;
+    title:string
 }
-const CompanionList = ({ companions, classNames }: CompanionListProps) => {
+const CompanionList = ({ companions, classNames,title }: CompanionListProps) => {
     return (
         <article className={cn('companion-list', classNames)}>
-            <h2 className="text-xl sm:text-2xl font-bold">Recently Completed Lessons</h2>
+            <h2 className="text-xl sm:text-2xl font-bold">{title}</h2>
             <Table>
                 <TableHeader>
                     <TableRow>
                         <TableHead className="text-lg w-2/3">Lessons</TableHead>
                         <TableHead className="text-lg">Subject</TableHead>
-                        <TableHead className="text-lg   text-right">Duration</TableHead>
+                        <TableHead className="text-lg text-right">Duration</TableHead>
 
                     </TableRow>
                 </TableHeader>
@@ -64,7 +65,7 @@ const CompanionList = ({ companions, classNames }: CompanionListProps) => {
                             </TableCell>
                             <TableCell>
                                 <div className="subject-badge w-fit">{subject}</div></TableCell>
-                            <TableCell>
+                            <TableCell className="md:pl-20">
                                 <div className="text-sm text-center">
                                     {duration}
                                     <span className="max-md:hidden"> Mins</span>
