@@ -13,7 +13,7 @@ const NavItems = () => {
     const pathname = usePathname();
 
     return (
-        <nav className="flex items-center gap-4">
+        <nav className="flex items-center gap-2 sm:gap-3">
             {navItems.map(({ label, href }) => {
                 const isActive = pathname === href;
 
@@ -21,7 +21,7 @@ const NavItems = () => {
                     <Link
                         key={label}
                         href={href}
-                        className={isActive ? 'text-primary font-semibold' : ''}
+                        className={isActive ? 'text-[#1E3A8A] font-semibold' : 'hover:text-[#1E3A8A] hover:bg-[#1E3A8A]/10 rounded-md px-2 py-1 transition-colors'}
                     >
                         {label}
                     </Link>
