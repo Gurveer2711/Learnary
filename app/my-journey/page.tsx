@@ -2,7 +2,7 @@
   import { redirect } from "next/navigation";
   import Image from "next/image";
   import { getUserSession, getUserCompanions } from "@/lib/actions/companion.actions";
-  import CompanionList from "@/components/CompanionList";
+  import CompanionList from "@/components/LessonList";
 import { getRecentSession } from "@/lib/actions/companion.actions";
 import {
   Accordion,
@@ -55,18 +55,18 @@ import {
               <p className="text-md text-gray-700">Lessons Completed</p>
             </div>
 
-            {/* Companions Created */}
+            {/* Lessons Created */}
             <div className="flex flex-col gap-2 border-2 border-black rounded-md p-4 w-64">
               <div className="flex items-center gap-2">
                 <Image
                   src="/icons/cap.svg"
-                  alt="Companions"
+                  alt="Lessons"
                   width={30}
                   height={30}
                 />
                 <h2 className="text-3xl font-semibold">{userCompanions.length}</h2>
               </div>
-              <p className="text-md text-gray-700">Companions Created</p>
+              <p className="text-md text-gray-700">Lessons Created</p>
             </div>
           </div>
         </section>
@@ -75,11 +75,15 @@ import {
           <AccordionItem value="item-1">
             <AccordionTrigger className="text-xl md:text-3xl">Lessons Completed</AccordionTrigger>
             <AccordionContent>
-                <CompanionList
-                  companions={userSessions}
-                  title = "Lessons Completed"
-                  classNames="w-full rounded-lg"
-                />
+                {userSessions.length === 0 ? (
+                  <div className="rounded-border p-6 text-center text-gray-600">No lessons completed yet.</div>
+                ) : (
+                  <CompanionList
+                    companions={userSessions}
+                    title = "Lessons Completed"
+                    classNames="w-full rounded-lg"
+                  />
+                )}
             </AccordionContent>
           </AccordionItem>
         </Accordion>
@@ -87,14 +91,18 @@ import {
         </section>
         <section>
         <Accordion type="single" collapsible>
-          <AccordionItem value="item-1">
-            <AccordionTrigger className="text-xl md:text-3xl">Companions Created</AccordionTrigger>
+          <AccordionItem value="item-2">
+            <AccordionTrigger className="text-xl md:text-3xl">Lessons Created</AccordionTrigger>
             <AccordionContent>
-                <CompanionList
-                  companions={userCompanions}
-                  title="Companions Created"
-                  classNames="w-full rounded-lg"
-                />
+                {userCompanions.length === 0 ? (
+                  <div className="rounded-border p-6 text-center text-gray-600">No lessons created yet.</div>
+                ) : (
+                  <CompanionList
+                    companions={userCompanions}
+                    title="Lessons Created"
+                    classNames="w-full rounded-lg"
+                  />
+                )}
             </AccordionContent>
           </AccordionItem>
         </Accordion>

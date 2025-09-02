@@ -42,7 +42,7 @@ export default function SubjectFilter() {
         
     }, [value,router,searchParams,pathname]);
     return (
-        <div className="w-full max-w-md">
+        <div className="w-full max-w-md border-2 border-black rounded-md">
             <Popover open={open} onOpenChange={setOpen}>
                 <PopoverTrigger asChild>
                     <Button

@@ -5,7 +5,7 @@ const Cta = () => {
   return (
     <section className="cta-section mb-4 shadow-sm hover:shadow-md transition-shadow">
       <div className="cta-badge font-medium">Start learning your way.</div>
-      <h2 className="text-3xl font-bold tracking-tight">Build a Personalize Learning Companion</h2>
+      <h2 className="text-3xl font-bold tracking-tight">Build a Personalized Learning Lesson</h2>
       <p className="px-8 text-white/90">Pick a name, subject, voice, & personality — and start learning through voice conversations that feel natural and fun.</p>
       <Image
         src="/images/cta.svg"
@@ -26,7 +26,7 @@ const Cta = () => {
               height={12}
             />
           </span>
-          Build New Companion
+          Build New Lesson
         </button>
       </Link>
     </section>

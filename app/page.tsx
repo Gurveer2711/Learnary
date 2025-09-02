@@ -1,6 +1,6 @@
-import CompanionCard from '@/components/CompanionCard'
+import CompanionCard from '@/components/LessonCard'
 import React from 'react'
-import CompanionList from '@/components/CompanionList'
+import CompanionList from '@/components/LessonList'
 import Cta from '@/components/Cta'
 import { getAllCompanions, getRecentSession } from '@/lib/actions/companion.actions'
 import { getSubjectColor } from '@/lib/utils'
@@ -26,6 +26,7 @@ const Page = async () => {
         <CompanionList
           companions={recentSessionCompanions}
           classNames="w-3/4 max-lg:w-full"
+          title="Lessons Created"
         />
         <Cta />
       </section>

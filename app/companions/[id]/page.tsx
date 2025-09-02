@@ -3,7 +3,7 @@ import { getSubjectColor } from "@/lib/utils";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import Image from "next/image";
-import CompanionComponent from "@/components/CompanionComponent";
+import CompanionComponent from "@/components/LessonComponent";
 interface CompanionSessionPageProps{
   params: Promise<{ id: string }>
 }

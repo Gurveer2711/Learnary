@@ -1,4 +1,4 @@
-import CompanionForm from "@/components/CompanionForm"
+import CompanionForm from "@/components/LessonForm"
 import { newCompanionPermissions } from "@/lib/actions/companion.actions";
 import { auth } from "@clerk/nextjs/server"
 import { redirect } from "next/navigation";
@@ -9,9 +9,9 @@ const CompanionBuilder = async () => {
   if (!userId) redirect('/sign-in');
   const canCreateCompanion = await newCompanionPermissions();
   return (
-    <main className="bg-gray-100 items-center justify-center font-inter py-12 h-min">
-      {canCreateCompanion ? (<article className="w-full min-sm:w-2/4 gap-4 flex flex-col px-4">
-        <h1 className="text-2xl font-semibold">Companion Builder</h1>
+    <main className=" items-center justify-center font-inter py-12 h-min">
+      {canCreateCompanion ? (<article className="w-full min-sm:w-2/4 gap-4 flex flex-col px-4 bg-white/60 shadow-2xl rounded-xl p-10">
+        <h1 className="text-2xl font-semibold">Lesson Builder</h1>
         <CompanionForm />
       </article>) :
         (

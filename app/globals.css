@@ -9,7 +9,7 @@ html, body {
   width: 100%;
 }
 :root {
-  --primary: oklch(69.617% 0.19953 38.94);
+  --primary: #1E3A8A;
 
   --cta: #2c2c2c;
   --cta-gold: #fccc41;
