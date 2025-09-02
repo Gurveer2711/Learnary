@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getSubjectColor } from "@/lib/utils";
 
 interface CompanionCardProps {
   id: string;
@@ -11,11 +12,12 @@ interface CompanionCardProps {
 }
 
 const CompanionCard = ({ id, name, topic, subject, duration, color }: CompanionCardProps) => {
+  const bg = getSubjectColor(subject) || color;
   return (
-    <article className="companion-card" style={{ backgroundColor: color }}>
+    <article className="companion-card shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 text-black" style={{ backgroundColor: bg }}>
       <div className="flex justify-between items-center">
-        <div className="subject-badge">{subject}</div>
-        <button className="companion-bookmark">
+        <div className="subject-badge bg-black text-white">{subject}</div>
+        <button className="companion-bookmark bg-black text-white">
           <Image
             src="/icons/bookmark.svg"
             alt="bookmark"
@@ -24,8 +26,8 @@ const CompanionCard = ({ id, name, topic, subject, duration, color }: CompanionC
           />
         </button>
       </div>
-      <h2 className="font-semibold text-xl sm:text-2xl ">{name}</h2>
-      <p className="text-sm">Topic: {topic}</p>
+      <h2 className="font-semibold text-xl sm:text-2xl tracking-tight">{name}</h2>
+      <p className="text-sm text-black/70">Topic: {topic}</p>
       <div className="flex items-center gap-2">
         <Image
           src="/icons/clock.svg"
@@ -33,13 +35,15 @@ const CompanionCard = ({ id, name, topic, subject, duration, color }: CompanionC
           width={13.5}
           height={13.5}
         />
-        <p className="text-sm">Duration: {duration} minutes</p>
+        <p className="text-sm text-black/70">Duration: {duration} minutes</p>
       </div>
       <Link
         href={`/companions/${id}`}
         className="w-full"
       >
-        <button className="btn-primary w-full justify-center">Launch Lesson</button>
+        <button className="btn-primary w-full justify-center">
+          Launch Lesson
+        </button>
       </Link>
     </article>
   )
