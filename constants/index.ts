@@ -8,12 +8,12 @@ export const subjects = [
 ];
 
 export const subjectsColors = {
-  science: "#E5D0FF",
-  maths: "#FFDA6E",
-  language: "#BDE7FF",
-  coding: "#FFC8E4",
-  history: "#FFECC8",
-  economics: "#C8FFDF",
+  science: "#4AD564", // blue-500
+  maths: "#F8F3BD", // cyan-500
+  language: "#A5F2ED", // emerald-500
+  coding: "#F7C5FF", // violet-500
+  history: "#E7BDF8", // purple-400 (light violet)
+  economics: "#F8F3BD", // slate-500 (cool gray)
 };
 
 export const voices = {
@@ -28,7 +28,7 @@ export const recentSessions = [
     name: "Neura the Brainy Explorer",
     topic: "Neural Network of the Brain",
     duration: 45,
-    color: "#E5D0FF",
+    color: subjectsColors.science,
   },
   {
     id: "2",
@@ -36,7 +36,7 @@ export const recentSessions = [
     name: "Countsy the Number Wizard",
     topic: "Derivatives & Integrals",
     duration: 30,
-    color: "#FFDA6E",
+    color: subjectsColors.maths,
   },
   {
     id: "3",
@@ -44,7 +44,7 @@ export const recentSessions = [
     name: "Verba the Vocabulary Builder",
     topic: "English Literature",
     duration: 30,
-    color: "#BDE7FF",
+    color: subjectsColors.language,
   },
   {
     id: "4",
@@ -52,7 +52,7 @@ export const recentSessions = [
     name: "Codey the Logic Hacker",
     topic: "Intro to If-Else Statements",
     duration: 45,
-    color: "#FFC8E4",
+    color: subjectsColors.coding,
   },
   {
     id: "5",
@@ -60,7 +60,7 @@ export const recentSessions = [
     name: "Memo, the Memory Keeper",
     topic: "World Wars: Causes & Consequences",
     duration: 15,
-    color: "#FFECC8",
+    color: subjectsColors.history,
   },
   {
     id: "6",
@@ -68,6 +68,6 @@ export const recentSessions = [
     name: "The Market Maestro",
     topic: "The Basics of Supply & Demand",
     duration: 10,
-    color: "#C8FFDF",
+    color: subjectsColors.economics,
   },
 ];
